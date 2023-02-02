@@ -1,13 +1,4 @@
-/* @media (min-width: 768px) { 
 
-}
-@media (min-width: 992px) {
-
-}
-
-@media (min-width: 1200px) {
-
-}  */
 html {
     scroll-behavior: smooth;
 }
@@ -34,6 +25,15 @@ i {
     margin-right:auto ;
     padding-left:15px ;
     padding-right: 15px;
+}
+@media (max-width: 767px){
+ .container {
+        width: 100%;
+    }
+    h2 {
+     font-size: 70px !important;
+     font-weight: 600;
+    }
 }
 @media (min-width: 768px) { 
     .container {
@@ -421,7 +421,7 @@ section {
 .sec5 .container a {
     display: block;
     color: var(--maincolor);
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 800px;
     letter-spacing: -2px;
     text-decoration: none;
