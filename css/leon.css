@@ -1,0 +1,453 @@
+/* @media (min-width: 768px) { 
+
+}
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}  */
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --maincolor:#10cab7;
+    --seccolor:#2c4755;
+    --main-duration:0.3s;
+    --padding:20px;
+}
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    font-family: "work sans" , sans-serif;
+    margin: 0;
+}
+i {
+    color: var(--maincolor);
+}
+.container {
+    margin-left:auto ;
+    margin-right:auto ;
+    padding-left:15px ;
+    padding-right: 15px;
+}
+@media (min-width: 768px) { 
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+} 
+h3 {
+    color: black;
+}
+.header {
+    padding: 20px;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo {
+    width: 60px;
+}
+.header .links {
+    position: relative;
+}
+.header .links i{
+    color: #333;
+    width: 16px;
+
+}
+.header .links i:nth-child(2){
+    display: none;
+}
+.header .links:hover i:nth-child(1){
+    display: none;
+}
+.header .links:hover i:nth-child(2){
+    display: block;
+}
+.header .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+}
+.header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+.header .links:hover ul {
+    display: block;
+}
+.header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: var(--main-duration);
+}
+.header .links ul li a:hover {
+    padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
+} 
+.landing {
+    background-image:url(../src/landing.jpg) ;
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+.landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    max-width: 100%;
+}
+.landing .intro-text h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--maincolor);
+}
+.landing .intro-text p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+.sec1 {
+    background-color: #f6f6f6;
+    padding-top: 50px;
+}
+.sec1 .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+.sec1 .container div {
+    padding: 20px;
+    text-align: center;
+}
+.sec1 .container i  {
+    color: var(--maincolor);
+    font-size: 40px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+/*sec2*/
+.sec2 {
+    padding: var(--padding);
+    text-align: center;
+}
+.sec2  h2 {
+    color:#ebeced;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    position: relative;
+}
+.sec2 h2::after {
+    content: "Don't be busy, be productive";
+    position: absolute;
+    font-size: 16px;
+    letter-spacing: normal;
+    color:#797979;
+    top: 82px;
+    left: 50%;
+    margin-left: -100px;
+}
+.sec2 .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+
+}
+.sec2 .container div div i {
+    color: var(--maincolor);
+    font-size: 40px;
+}
+.sec2 .container div div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px
+}
+.sec2 .container div .text {
+    display: flex;
+    flex-direction: column;
+}
+.sec2 .container div div p {
+    color: #444;
+}
+.sec2 .container .col3{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2 .container .col3 .back::before {
+    position: absolute;
+    content: "";
+    background-color: var(--seccolor);
+    width: 100px;
+    height: 400px;
+    top: 10px;
+    left: 260px;
+    z-index: -1;
+    display: none;
+}
+
+.sec2 .container .col3 .back img {
+    display: none;
+    width: 260px;
+    height: 350px;
+}
+
+@media (max-width: 767px) { 
+    .sec2 .container div div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px
+    }
+}
+@media (min-width: 768px) { 
+    .sec2 .container div div {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 40px
+    }
+}
+@media (min-width: 992px) {
+    .sec2 .container div div {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 40px
+    }
+}
+
+@media (min-width: 1200px) {
+    .sec2 .container .col3 .back img {
+        display: block;
+    }
+    .sec2 .container div div {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 30px
+    }
+    .sec2 .container .col3 .back::before {
+        display: block;
+    }
+}
+/* sec3 */
+.sec3 {
+    padding: var(--padding);
+    text-align: center;
+}
+.sec3  h2 {
+    color:#ebeced;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    position: relative;
+}
+.sec3 h2::after {
+    content: "If you do it right, it will last forever.";
+    position: absolute;
+    font-size: 16px;
+    letter-spacing: normal;
+    color:#797979;
+    top: 82px;
+    left: 50%;
+    margin-left: -135px;
+}
+.sec3 .container {
+    padding: var(--padding);
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px , 1fr));
+    grid-gap: 30px;
+
+}
+.sec3 .container div img {
+    max-width: 100%;
+
+}
+.sec3 .container .card {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+/* sec4 */
+section {
+    padding: var(--padding);
+    text-align: center;
+}
+.sec4 h2 {
+    color:#ebeced ;
+    font-size: 100px;
+    font-weight: 800px;
+    position: relative;
+    letter-spacing: -3px;
+}
+.sec4 h2::after {
+    color:#797979;
+    content: "We are born to create";
+    font-size: 16px;
+    position: absolute;
+    top: 82px;
+    left: 50%;
+    margin-left: -80px;
+    letter-spacing: normal;
+}
+.sec4 .container {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    position: relative;
+}
+.sec4 .container .col1 div img {
+    max-width: 100%;
+    width: 200px;
+    height: 360px;
+}
+.sec4 .container .col1 div{
+    position: relative;
+}
+.sec4 .container .col1 div::before {
+    width: 100px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    height: 100px;
+    content: "";
+    z-index: -10;
+    color: var(--seccolor);
+}
+.sec4 .container .col2 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.sec4 .container .col2 h3 {
+    position: relative;
+}
+.sec4 .container .col2 hr {
+    width: 50%;
+    height: 0px;
+    display: inline-block;
+    border-color: var(--maincolor);
+}
+@media (max-width: 991px) { 
+    .sec4 .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        position: relative;
+    }
+
+}
+@media (min-width: 992px) {
+    .sec4 .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+    }
+}
+.sec5 {
+    padding: var(--padding);
+    text-align: center;
+
+}
+.sec5 h2 {
+    color:#ebeced ;
+    font-size: 100px;
+    font-weight: 800px;
+    letter-spacing: -3px;
+    position: relative;
+}
+.sec5 h2::before {
+    color:#797979;
+    content: "We are born to create";
+    letter-spacing: normal;
+    font-size: 16px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: -68px;
+}
+.sec5 .container {
+    display: flex;
+    flex-direction: column;
+}
+.sec5 .container h3 {
+    color: var(--seccolor);
+    font-weight: 800px;
+    font-size: 35px;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+    margin-top: -15px;
+}
+.sec5 .container a {
+    display: block;
+    color: var(--maincolor);
+    font-size: 35px;
+    font-weight: 800px;
+    letter-spacing: -2px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.sec5 .container .social {
+    display: flex;
+    flex-direction: row;
+}
+.fa-youtube {
+    color: var(--seccolor);
+}
+.fa-facebook-f{
+    color: var(--seccolor);
+}
+.fa-twitter {
+    color: var(--seccolor);
+}
+.footer {
+    background-color: var(--seccolor);
+    color: white;
+    width: 100%;
+    padding: 30px 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.footer .container span {
+    color: var(--maincolor);
+}
